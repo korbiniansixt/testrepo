@@ -1,5 +1,7 @@
 <?php
-namespace Movies;
+namespace Movies\lib;
+use Movies\Data\Connection;
+
 /**
  * Small movie library to test+learn ElasticSearch and to learn some PHP...
  * @author: Korbinian Weilhart
@@ -21,7 +23,7 @@ class MovieLibrary
             'year' => $year,
             'genres' => $genres
         );
-        $result = Data\Connection::postRequest($url, json_encode($post));
+        $result = Connection::postRequest($url, json_encode($post));
         echo 'var_dump result in addMovie: '."\n";
         var_dump($result);
     }
@@ -39,7 +41,7 @@ class MovieLibrary
                 )
             )
         );
-        $result = Data\Connection::postRequest($url, json_encode($post));
+        $result = Connection::postRequest($url, json_encode($post));
 
         echo 'var_dump result in searchMovie: '."\n";
         var_dump($result);

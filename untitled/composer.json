@@ -1,5 +1,7 @@
 {
   "autoload": {
-    "psr-4": {"Movies\\": "src/"}
+    "psr-4": {"Movies\\": "src/",
+    "lib\\":"src/lib/"
+    }
   }
 }
